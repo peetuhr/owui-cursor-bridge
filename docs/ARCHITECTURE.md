@@ -119,12 +119,13 @@ Cursor responds (JSON):
 
 ## Project Phases
 
-### Phase 1: Fire and Forget (MVP)
+### Phase 1: Fire and Forget (MVP) ✅ COMPLETE
 
-- [ ] Watcher script monitors a folder
-- [ ] OWUI tool writes instruction files
-- [ ] Watcher executes and logs result
-- [ ] No feedback to OWUI yet
+- [x] Watcher script monitors instructions folder
+- [x] OWUI tool writes instruction files (triggered by `s2cursor`)
+- [x] Watcher processes JSON and writes `CURSOR_INSTRUCTION.md`
+- [x] Instruction history maintained (last 5)
+- [x] JSON files cleaned up after processing
 
 ### Phase 2: Bidirectional Communication
 
@@ -206,10 +207,10 @@ owui-cursor-bridge/
 
 ## Open Questions
 
-1. Where should the shared volume live? (`~/.owui-bridge/`?)
-2. How to handle Cursor not being open?
-3. Should watcher auto-start with WSL?
-4. How to surface errors clearly in OWUI?
+1. ~~Where should the shared volume live?~~ → `F:\AI\owui-bridge` (Windows) / `/mnt/f/AI/owui-bridge` (WSL)
+2. How to handle Cursor not being open? → Currently manual; user opens `CURSOR_INSTRUCTION.md`
+3. Should watcher auto-start with WSL? → Future enhancement
+4. How to surface errors clearly in OWUI? → Phase 2 (response files)
 
 ---
 
